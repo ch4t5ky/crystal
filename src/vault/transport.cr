@@ -4,7 +4,7 @@ module Vault
   class Transport
     getter client
 
-    def initialize(@client: HTTP::Client)
+    def initialize(@client : HTTP::Client)
     end
 
     def get(path : String) : HTTP::Client::Response
@@ -12,12 +12,12 @@ module Vault
       return resp
     end
 
-    def post(path : String, payload : JSON:Any) : HTTP::Client::Response
+    def post(path : String, payload : JSON::Any) : HTTP::Client::Response
       resp.post(path, body: data)
       return resp
     end
 
-    def put(path : String, payload : JSON:Any) : HTTP::Client::Response
+    def put(path : String, payload : JSON::Any) : HTTP::Client::Response
       resp.post(path, body: data)
       return resp
     end
