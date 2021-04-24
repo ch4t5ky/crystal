@@ -1,0 +1,9 @@
+name: crystal-vault
+version: 0.0.1
+
+authors:
+  - Artem Zaglubotskii <artem.v.zaglubotskii@gmail.com>
+
+crystal: 1.0.0
+
+license: MIT
