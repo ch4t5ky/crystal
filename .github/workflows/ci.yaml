@@ -1,0 +1,13 @@
+name: CI
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: oprypin/install-crystal@v1
+        with:
+          crystal: 1.0.0
+      - run: crystal build src/crystal-vault.cr
