@@ -12,13 +12,13 @@ module Vault
       return resp
     end
 
-    def post(path : String, payload : JSON::Any) : HTTP::Client::Response
-      resp.post(path, body: data)
+    def post(path : String, payload : String) : HTTP::Client::Response
+      resp = client.post(path, body: payload)
       return resp
     end
 
-    def put(path : String, payload : JSON::Any) : HTTP::Client::Response
-      resp.post(path, body: data)
+    def put(path : String, payload : String) : HTTP::Client::Response
+      resp = client.put(path, body: payload)
       return resp
     end
 
